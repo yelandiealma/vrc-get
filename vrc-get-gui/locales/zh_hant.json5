@@ -12,6 +12,7 @@
     "general:button:add": "添加",
     "general:button:edit": "編輯",
     "general:button:cancel": "取消",
+    "general:button:delete": "刪除",
     "general:button:close": "關閉",
     "general:button:ok": "好的",
     "general:button:reset": "重置",
@@ -190,6 +191,7 @@
   // Manage Projects
     "projects:manage:tooltip:back to projects": "回到專案頁面",
     "projects:menuitem:change launch options": "變更啟動選項",
+    "projects:menuitem:copy project": "複製專案",
     "projects:menuitem:backup": "進行備份",
     "projects:menuitem:forget unity path": "清除 Unity 版本設定",
     "projects:manage:project location": "位於：<path>{{path}}</path>",
@@ -281,8 +283,13 @@
     "projects:toast:unity migrated": "此專案已遷移到 Unity 20222",
 
     "projects:manage:dialog:confirm changes description": "你正在對專案套用以下變更。",
+    "projects:manage:dialog:note breaking changes": "部分套件之間存在重大變更。<br/>專案中的資產、設定與工具可能不再相容。<br/>請查閱相容性資訊並小心升級。",
+    "projects:manage:dialog:note incompatibility": "與部分其他套件存在相容性問題。<br/>這些工具在載入專案或使用過程中可能會報錯。<br/>請查閱相容性資訊並升級相關套件，或者謹慎安裝。",
+    "projects:manage:dialog:upgrade package": "將 <b>{{name}}</b> 的 {{previousVersion}} 版本升級到 <b>{{version}}</b>",
+    "projects:manage:dialog:downgrade package": "將 <b>{{name}}</b> 的 {{previousVersion}} 版本降級到 <b>{{version}}</b>",
     "projects:manage:dialog:install package": "安裝 <b>{{name}}</b> 的 {{version}} 版本",
     "projects:manage:dialog:reinstall package": "重新安裝 <b>{{name}}</b> 的 {{version}} 版本",
+    "projects:manage:dialog:breaking changes": "Includes breaking changes",
     "projects:manage:dialog:uninstall package as requested": "移除 <b>{{name}}</b>，依照你的要求",
     "projects:manage:dialog:uninstall package as legacy": "移除 <b>{{name}}</b>，因為這是舊版套件",
     "projects:manage:dialog:uninstall package as unused": "移除 <b>{{name}}</b>，因為這未被使用",
@@ -301,6 +308,11 @@
 
     "projects:manage:dialog:missing dependencies": "部分套件缺失",
     "projects:manage:dialog:missing dependencies description": "需要匯入以下套件，但未在已有儲存庫內找到它們。<br/>請添加包含這些套件的儲存庫。<br/>你可以查看 <ExternalLink href='https://vpm-catalog.vercel.app/'>VPM Catalog</ExternalLink> 以尋找對應的套件儲存庫。",
+
+    // copy project
+    "projects:dialog:copy project": "複製專案：{{name}}",
+    "projects:dialog:copying...": "複製專案中...",
+    "projects:toast:successfully copied project": "已成功複製專案：<b>{{name}}</b>",
 
 
 // Packages Page
@@ -378,9 +390,9 @@
     "templates:tooltip:category:alcom": "自訂範本由你創建、可在 ALCOM 內編輯。",
     "templates:category:vcc": "VCC",
     "templates:tooltip:category:vcc": "VCC 範本由你手動為 VCC 創建。",
-    "templates:tooltip:remove template": "移除範本",
-    "templates:tooltip:remove builtin template": "不可移除內建範本。",
-    "templates:tooltip:remove vcc template": "你無法在此移除 VCC 範本，請至範本資料夾裡移除。",
+    "templates:tooltip:remove template": "刪除範本",
+    "templates:tooltip:remove builtin template": "不可刪除內建範本。",
+    "templates:tooltip:remove vcc template": "你無法在此刪除 VCC 範本，請至範本資料夾裡刪除。",
     "templates:menuitem:edit template": "編輯範本",
     "templates:menuitem:export template": "匯出 範本",
     "templates:tooltip:export template with unitypackage": "由於 Unity 套件（Unity packages）不具備可攜性，所以你無法匯出含有它們的模板。",
@@ -393,11 +405,13 @@
     "templates:dialog:version": "版本",
     "templates:dialog:unitypackages": "Unity 套件（.unitypackages）",
     "templates:dialog:no unitypackages": "無 Unity 套件",
+    "templates:dialog:remove template": "刪除範本",
+    "templates:dialog:confirm remove template": "你確定要刪除 {{displayName}} 範本嗎？",
     "templates:button:save template": "儲存範本",
     "templates:button:import template": "匯入範本",
     "templates:toast:imported n templates_one": "已匯入 {{count}} 個範本",
     "templates:toast:imported n templates_other": "已匯入 {{count}} 個範本",
-    "template:toast:removed": "已移除範本",
+    "template:toast:removed": "已刪除此範本",
 
 
 // Settings Page
